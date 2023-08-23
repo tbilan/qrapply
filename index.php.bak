@@ -65,7 +65,7 @@ if(isset($_POST['SubmitButton'])){
 				placeholder="Complete Name" required style="width: 100%; max-width: 100%;"></textArea>
 			<textArea type="phone" class="form-control form-control-user" id="phone" rows=1 name="phone" maxlength=200 
 				placeholder="What is your phone number?" required style="width: 100%; max-width: 100%;"></textArea>
-			<textArea type="address" class="form-control form-control-user" id="address" rows=5 name="address" maxlength=200 
+			<textArea type="address" class="form-control form-control-user" id="address" rows=1 name="address" maxlength=200 
 				placeholder="What is your home address?" required style="width: 100%; max-width: 100%;"></textArea>
 			<textArea type="license" class="form-control form-control-user" id="license" rows=1 name="license" maxlength=200 
 				placeholder="What is your driver's license number?" required style="width: 100%; max-width: 100%;"></textArea>
