@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-include_once("connect_db.php");
-?>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,27 +22,6 @@ $posted_paylods = array();
 $LocationID = $_GET['id'];
 $CustomerID = $_GET['cid'];
 
-$sql = "SELECT CustomerID, LocationID, customer, building, location FROM Mapping WHERE LocationID = '$LocationID' and CustomerID ='$CustomerID'";
-if($result = mysqli_query($conn, $sql)){
-	$error = false;
-	
-} else {
-	echo "ERROR: Unable to execute $sql. " . mysqli_error($conn);
-}
-
-$rowcount = mysqli_num_rows( $result );
-
-if ($rowcount > 0) {
-	while ($row = mysqli_fetch_assoc($result)) {
-		$customer = $row['customer'] . "<br>";
-		$building = $row['building'] . "<br>";
-		$location = $row['location'] . "<br>";
-	}
-}else {
-	$customer = "Invalid ID";
-	echo "Invalid ID: " . "$LocationID";
-	}
-	
 if(isset($_POST['SubmitButton'])){
 	$message = $_POST['message'];
 	
@@ -55,27 +30,6 @@ if(isset($_POST['SubmitButton'])){
 
 	$LocationID = $_GET['id'];
 
-    $sql = "INSERT INTO Log (datelogged, LocationID, serviceRequestBody) VALUES (curdate(), '$LocationID', '$message')";
-	if(mysqli_query($conn, $sql)){
-		$error = false;
-	} 
-	
-	$sql = "SELECT LocationID, customer, building, location FROM Mapping WHERE LocationID = '$LocationID'";
-	if($result = mysqli_query($conn, $sql)){
-		$error = false;
-	} 
-	mysqli_close($conn);
-	
-	$rowcount = mysqli_num_rows( $result );
-	
-	if ($rowcount > 0) {
-		while ($row = mysqli_fetch_assoc($result)) {
-			$subject = $row['customer'] . " - " . $row['building'] . " - " . $row['location'];
-		} 
-		} else {
-		$subject = "Invalid ID: " . "$LocationID";
-	}
-	
 	$url = 'https://prod-54.eastus.logic.azure.com:443/workflows/1def9b783d4f43649ea9a918c73693ad/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kqUHEVXpUPU_s4PMpF6n5JShAuKnY-CikRV-ZBwOvaA';
 	$ch = curl_init($url);
 	$data = array(
