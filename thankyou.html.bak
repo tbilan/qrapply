@@ -1,0 +1,11 @@
+<html>
+<body>
+<img src="provantageo365mini.jpg" width=100%>
+<main class="container">
+  <div class="bg-light p-5 rounded mt-3">
+	<br>
+	<p style="font-family:verdana; font-size:500%; text-align:center;"><center>Your service request has been received!</center></p>
+  </div>
+</main>
+</body>
+</html>
