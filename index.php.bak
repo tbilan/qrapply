@@ -59,7 +59,6 @@ if(isset($_POST['SubmitButton'])){
   <div class="bg-light p-5 rounded mt-3">
 	<form class="user" method="POST" action="<?=$_SERVER['REQUEST_URI']?>">
 		<div class="form-group mb-3">
-			<?php echo "$customer"; echo "$building"; echo "$location"; ?>
 			<textArea type="name" class="form-control form-control-user" id="name" rows=1 name="name" maxlength=200 
 				placeholder="Complete Name" required style="width: 100%; max-width: 100%;"></textArea>
 			<textArea type="phone" class="form-control form-control-user" id="phone" rows=1 name="phone" maxlength=200 
