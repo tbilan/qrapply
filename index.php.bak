@@ -19,16 +19,11 @@
 <?php
 $posted_paylods = array();
 
-$LocationID = $_GET['id'];
-$CustomerID = $_GET['cid'];
-
 if(isset($_POST['SubmitButton'])){
 	$message = $_POST['message'];
 	
     $error = true;
     $alert_msg ="alert_msg";
-
-	$LocationID = $_GET['id'];
 
 	$url = 'https://prod-82.eastus.logic.azure.com:443/workflows/b7fff3e5cd8b4e118453cb8fa9bc24aa/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=UMgn4kB1iUSNbd55qgDFFp0F7fq2_MGDBxok9jIfLoM';
 	$ch = curl_init($url);
