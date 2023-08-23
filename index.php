@@ -79,8 +79,12 @@ if(isset($_POST['SubmitButton'])){
 	$url = 'https://prod-54.eastus.logic.azure.com:443/workflows/1def9b783d4f43649ea9a918c73693ad/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kqUHEVXpUPU_s4PMpF6n5JShAuKnY-CikRV-ZBwOvaA';
 	$ch = curl_init($url);
 	$data = array(
-		'serviceRequestBody' => $message,
-		'subject' => $subject
+		'name' => $name,
+		'phone' => $phone,
+		'address' => $address,
+		'license' => $license,
+		'shift' => $shift,
+		'pay' => $pay
 	);
 	$payload = json_encode(array("user" => $data));
 	$payload = json_encode($data);
