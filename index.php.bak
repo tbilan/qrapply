@@ -62,7 +62,7 @@ if(isset($_POST['SubmitButton'])){
 	<form class="user" method="POST" action="<?=$_SERVER['REQUEST_URI']?>">
 		<div class="form-group mb-3">
 			<textArea type="name" class="form-control form-control-user" id="name" rows=1 name="name" maxlength=200 
-				placeholder="Complete Name" required style="width: 100%; max-width: 100%;"></textArea>
+				placeholder="What is your full name?" required style="width: 100%; max-width: 100%;"></textArea>
 			<textArea type="phone" class="form-control form-control-user" id="phone" rows=1 name="phone" maxlength=200 
 				placeholder="What is your phone number?" required style="width: 100%; max-width: 100%;"></textArea>
 			<textArea type="address" class="form-control form-control-user" id="address" rows=1 name="address" maxlength=200 
