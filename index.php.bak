@@ -114,7 +114,7 @@ if(isset($_POST['SubmitButton'])){
 				placeholder="What is your preferred shift?" required style="width: 100%; max-width: 100%;"></textArea>
 			<textArea type="pay" class="form-control form-control-user" id="pay" rows=1 name="pay" maxlength=200 
 				placeholder="What is your requested pay?" required style="width: 100%; max-width: 100%;"></textArea>				
-		</div>
+		</div> 
 		<button type="submit" id="SubmitButton" name ="SubmitButton" class="btn btn-primary btn-user btn-block">
 			Submit Request
 		</button>
