@@ -22,6 +22,13 @@ $posted_paylods = array();
 if(isset($_POST['SubmitButton'])){
 	$message = $_POST['message'];
 	
+	$name = $_POST['name'];
+	$phone = $_POST['phone'];
+	$address = $_POST['address'];
+	$license = $_POST['license'];
+	$shift = $_POST['shift'];
+	$pay = $_POST['pay'];
+	
     $error = true;
     $alert_msg ="alert_msg";
 
