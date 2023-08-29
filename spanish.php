@@ -50,7 +50,7 @@ if(isset($_POST['SubmitButton'])){
 	$result = curl_exec($ch);
 	echo $result;
 	
-	echo "<meta http-equiv='refresh' content='0; url=thankyou.html'>";
+	echo "<meta http-equiv='refresh' content='0; url=gracias.html'>";
 	
 }
 ?>
