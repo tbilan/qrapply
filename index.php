@@ -80,7 +80,7 @@ Join our team!  Please enter your information below so we can add you to our app
 				placeholder="What is your requested pay?" required style="width: 100%; max-width: 100%;"></textArea>				
 		</div> 
 		<button type="submit" id="SubmitButton" name ="SubmitButton" class="btn btn-primary btn-user btn-block">
-			Submit Request
+			Submit
 		</button>
 	</form>
 </div>

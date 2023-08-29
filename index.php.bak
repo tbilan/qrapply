@@ -58,7 +58,7 @@ if(isset($_POST['SubmitButton'])){
 <body>
 <img src="provantageo365mini.jpg" width=100%>
 Join our team!  Please enter your information below so we can add you to our applicant list.
-<form action="https://qrapply.teamprovantage.com/spanish.php">
+<form action="https://qrapply.goprovantage.com/spanish.php">
 	<center><input type="submit" value="Espanol"></center>
 </form>
 
